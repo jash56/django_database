@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Hello SuperHero</h1>
+    <h2>Login here</h2>
+
+    <form action="marvel" method="post">
+        {% csrf_token %}
+        <label for="hero"> Enter your hero name : </label><br>
+        <input type="text" name="hero" /><br />
+
+        <label for="pass">Enter your password : </label><br>
+        <input type="password" name="pass" /><br />
+
+        <input type="submit" />
+    </form>
+    <div>
+        {% for message in messages %}
+        {{message}}
+        {% endfor %}
+    </div>
+</body>
+</html>

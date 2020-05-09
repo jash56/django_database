@@ -1,0 +1,15 @@
+hello fans!!!!!!!!
+
+<form align="right" method="post" action="logout">
+    {% csrf_token %}
+    <label>
+        <input type="submit" value="logout">
+    </label>
+</form>
+{% for super in hero %}
+    <div>{{super.name}}</div><br />
+    <div>{{super.rank}}</div><br />
+    <div><img src="{{super.img.url}}" /></div><br />
+    <div>{{super.desc}}</div><br />
+    <div>{{super.weapon}}</div><br />
+{% endfor %}
